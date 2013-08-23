@@ -51,7 +51,9 @@
 {
     transmitting = YES;
     [SVProgressHUD show];
-    
+    __block BOOL isFinishConnection = NO;
+    int i = 0;
+
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
@@ -61,21 +63,54 @@
                                    id parse = [NSJSONSerialization JSONObjectWithData:data
                                                                               options:NSJSONReadingMutableContainers
                                                                                 error:&parseError];
-                                   transmitting = NO;
+//                                   transmitting = NO;
                                    receivedData = (NSDictionary*)parse;
                                    [SVProgressHUD dismiss];
+                                   isFinishConnection = YES;
                                }
                            }];
-    
+    do{
+        i++;
+        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.5]];
+        NSLog(@"isFinish=%d",isFinishConnection);
+
+    }while(isFinishConnection);
+//    return nil;
     return [self dictionaryToMovieArrayWithDictionary:receivedData];
 }
 
 // NSDictionary型 から Movie の NSArray に変換．
 - (NSArray*)dictionaryToMovieArrayWithDictionary:(NSDictionary*)data
 {
-    return nil;
+    NSMutableArray *movieArray = [NSMutableArray array];
+    NSDictionary *dictionary = [data objectForKey:@"results"];
+    for(NSDictionary *result in dictionary){
+        [movieArray addObject:[self createMovieFromJSONForITunes:result]];
+    }
+    return (NSArray*)movieArray;
 }
 
+/**
+ * ITuneから返ってきたJSONをMovieクラスに変更する。
+ * result : JSONの一つのresultを入れる
+ * 戻り値 : 引数をMoVieクラスに変更したものが返ってくる
+ */
+-(Movie*) createMovieFromJSONForITunes: (NSDictionary*) result{
+    //iTuneIdの取得
+    NSString *movieId = [result objectForKey:@"trackId"];
+    //タイトルの取得
+    NSString *movieTitle = [result objectForKey:@"trackCensoredName"];
+    //ジャンルの取得
+    NSString *movieType = [result objectForKey:@"primaryGenreName"];
+    //映画の画像の取得
+    NSString *imageUrl = [result objectForKey:@"artworkUrl30"];
+    id path = imageUrl;
+    NSURL *url = [NSURL URLWithString:path];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    UIImage *movieImage = [[UIImage alloc]initWithData:data];
+    
+    return [[Movie alloc] initWithId:movieId Image:movieImage Title:movieTitle Type:movieType];
+}
 
 // iTunes Api用のリクエストURLを生成．
 - (NSString*)getUrlForiTunesWithKey:(NSString*)movieId

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4414601A17C7265400E55D97 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4414601917C7265400E55D97 /* CoreData.framework */; };
+		4414601D17C7267500E55D97 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4414601B17C7267500E55D97 /* Model.xcdatamodeld */; };
 		975E162817C5F04900EF90D5 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 975E162717C5F04900EF90D5 /* Movie.m */; };
 		975E162C17C5F5E800EF90D5 /* MovieSearcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 975E162B17C5F5E800EF90D5 /* MovieSearcher.m */; };
 		975E163217C6219300EF90D5 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 975E162F17C6219300EF90D5 /* SVProgressHUD.bundle */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4414601917C7265400E55D97 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4414601C17C7267500E55D97 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		975E162617C5F04900EF90D5 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		975E162717C5F04900EF90D5 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
 		975E162A17C5F5E800EF90D5 /* MovieSearcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieSearcher.h; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4414601A17C7265400E55D97 /* CoreData.framework in Frameworks */,
 				975E163517C621E500EF90D5 /* QuartzCore.framework in Frameworks */,
 				97A1403317C5CC0100A92089 /* UIKit.framework in Frameworks */,
 				97A1403517C5CC0100A92089 /* Foundation.framework in Frameworks */,
@@ -113,6 +118,8 @@
 		97A1402617C5CC0100A92089 = {
 			isa = PBXGroup;
 			children = (
+				4414601B17C7267500E55D97 /* Model.xcdatamodeld */,
+				4414601917C7265400E55D97 /* CoreData.framework */,
 				975E163417C621E500EF90D5 /* QuartzCore.framework */,
 				97A1403817C5CC0100A92089 /* MyMovie */,
 				97A1403117C5CC0100A92089 /* Frameworks */,
@@ -286,6 +293,7 @@
 				975E162C17C5F5E800EF90D5 /* MovieSearcher.m in Sources */,
 				975E163317C6219300EF90D5 /* SVProgressHUD.m in Sources */,
 				975E167217C654AA00EF90D5 /* SelectViewController.m in Sources */,
+				4414601D17C7267500E55D97 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +419,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4414601B17C7267500E55D97 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4414601C17C7267500E55D97 /* Model.xcdatamodel */,
+			);
+			currentVersion = 4414601C17C7267500E55D97 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 97A1402717C5CC0100A92089 /* Project object */;
 }

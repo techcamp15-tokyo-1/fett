@@ -36,6 +36,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 
     // カスタムセル利用の宣言
     [self.tableView registerNib:[UINib nibWithNibName:CELLNIBNAME bundle:nil]
