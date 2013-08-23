@@ -10,6 +10,9 @@
 #import "AppDelegate.h"
 #import "MovieSearcher.h"
 
+#define CELLNIBNAME @"LogCell"
+#define CELLIDENTIFIER @"LogCell"
+
 @interface CustionViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     AppDelegate *appDelegate;

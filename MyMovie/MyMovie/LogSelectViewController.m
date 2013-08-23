@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad
 {
-    moviesView = _movieTableView;
+   // moviesView = _movieTableView;
     
     [super viewDidLoad];
 }

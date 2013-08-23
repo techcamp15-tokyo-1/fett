@@ -30,10 +30,19 @@
 {
     [super viewDidLoad];
     //movieListを初期化
-    MovieSearcher *searcher = [MovieSearcher alloc];
-    movieList = [[searcher getMovieFromTerm:@"ハリーポッター"] mutableCopy];
-    
+
 	// Do any additional setup after loading the view.
+    [resultList registerNib:[UINib nibWithNibName:CELLNIBNAME bundle:nil]
+     forCellReuseIdentifier:CELLIDENTIFIER];
+
+}
+
+-(void) pushButton{
+    movieList = [[movieSearcher getMovieFromTerm:@"World"] mutableCopy];
+    for(int i = 0; i < movieList.count; i++){
+        NSLog(@"%@",((Movie*)[movieList objectAtIndex:i]).title);
+    }
+    [resultList reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,4 +51,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)pushAction:(id)sender {
+        [self pushButton];
+}
 @end

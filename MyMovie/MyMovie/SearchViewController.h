@@ -10,5 +10,7 @@
 
 @interface SearchViewController : CustionViewController
 @property (weak, nonatomic) IBOutlet UITableView *resultList;
+- (IBAction)pushAction:(id)sender;
+
 
 @end

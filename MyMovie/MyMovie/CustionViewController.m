@@ -10,8 +10,7 @@
 #import "Movie.h"
 #import "LogCell.h"
 
-#define CELLNIBNAME @"LogCell"
-#define CELLIDENTIFIER @"LogCell"
+
 
 @interface CustionViewController ()
 
@@ -36,12 +35,12 @@
     appDelegate = [[UIApplication sharedApplication] delegate];
     
     // tableViewのデリゲート設定
-    moviesView.delegate = self;
-    moviesView.dataSource = self;
+//    moviesView.delegate = self;
+//    moviesView.dataSource = self;
     
     // カスタムセル利用の宣言
-    [moviesView registerNib:[UINib nibWithNibName:CELLNIBNAME bundle:nil]
-     forCellReuseIdentifier:CELLIDENTIFIER];
+//    [moviesView registerNib:[UINib nibWithNibName:CELLNIBNAME bundle:nil]
+//     forCellReuseIdentifier:CELLIDENTIFIER];
 }
 
 - (void)didReceiveMemoryWarning
