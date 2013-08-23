@@ -6,8 +6,11 @@
 //  Copyright (c) 2013年 fett. All rights reserved.
 //
 
-#import "LogTableViewController.h"
+/*
+ * 映画記録画面
+ */
 
+#import "LogTableViewController.h"
 #import "MovieSearcher.h"
 
 #define CELLNIBNAME @"LogCell"
@@ -18,13 +21,14 @@
 @end
 
 @implementation LogTableViewController {
+    // 記録リスト
+    NSMutableArray *_movieList;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -33,25 +37,28 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    //[self.tableView registerClass:[LogCell class] forCellReuseIdentifier:@"LogCell"];
-    [self.tableView registerNib:[UINib nibWithNibName:CELLNIBNAME bundle:nil] forCellReuseIdentifier:CELLIDENTIFIER];
-    
-    
-    MovieSearcher *ms = [[MovieSearcher alloc] init];
-    [ms getMovieFromId:@"1456907133"];
+    // カスタムセル利用の宣言
+    [self.tableView registerNib:[UINib nibWithNibName:CELLNIBNAME bundle:nil]
+         forCellReuseIdentifier:CELLIDENTIFIER];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
+
+// セルを追加する
+- (void)insertNewObject:(id)sender
+{
+    if (!_movieList) {
+        _movieList = [[NSMutableArray alloc] init];
+    }
+    [_movieList insertObject:[NSDate date] atIndex:0];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 
 #pragma mark - Table view data source
 
@@ -64,7 +71,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 3;
+    return _movieList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

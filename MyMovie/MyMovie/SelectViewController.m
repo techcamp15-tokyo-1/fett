@@ -1,23 +1,18 @@
 //
-//  SearchViewController.m
+//  SelectViewController.m
 //  MyMovie
 //
 //  Created by Tetsuro Fuji on 13/08/22.
 //  Copyright (c) 2013年 fett. All rights reserved.
 //
 
-/*
- * 映画紹介画面
- */
+#import "SelectViewController.h"
 
-
-#import "SearchViewController.h"
-
-@interface SearchViewController ()
+@interface SelectViewController ()
 
 @end
 
-@implementation SearchViewController
+@implementation SelectViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

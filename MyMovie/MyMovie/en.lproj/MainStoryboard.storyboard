@@ -4,12 +4,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Log Table View Controller - log-->
+        <!--Log Table View Controller - 記録-->
         <scene sceneID="oAS-2F-dJH">
             <objects>
                 <tableViewController id="OU3-AS-wof" customClass="LogTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="j9v-jn-GcV">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -18,49 +18,138 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="log" id="Aqh-NN-gOB"/>
+                    <navigationItem key="navigationItem" title="記録" id="BOK-7x-4uX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="v8k-uF-0gb">
+                            <connections>
+                                <segue destination="aTL-6d-eBt" kind="modal" modalTransitionStyle="crossDissolve" id="cam-V6-evW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXF-R2-uAy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="638" y="-253"/>
+            <point key="canvasLocation" x="1116" y="-160"/>
+        </scene>
+        <!--Select View Controller-->
+        <scene sceneID="6Sb-1A-z5M">
+            <objects>
+                <viewController id="aTL-6d-eBt" customClass="SelectViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P19-cS-z2C">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" id="LDb-fy-wb2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="検索" id="6mj-rN-9h7">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="TFw-mE-Nkv"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="sku-ag-UdV"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="mAW-by-efV">
+                                <rect key="frame" x="20" y="66" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cs3-AV-akO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1599" y="158"/>
+        </scene>
+        <!--Navigation Controller - Log-->
+        <scene sceneID="dwe-2O-adO">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="reP-7z-V9g" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Log" id="ors-bK-m4z"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="XrG-2P-ueV">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OU3-AS-wof" kind="relationship" relationship="rootViewController" id="R7x-VJ-oUD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mtn-jU-m3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="633" y="-166"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
             <objects>
                 <tabBarController id="4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MFc-jt-JvQ"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="OU3-AS-wof" kind="relationship" relationship="viewControllers" id="Baq-bb-wU0"/>
-                        <segue destination="of4-ct-khk" kind="relationship" relationship="viewControllers" id="OB5-vo-azp"/>
+                        <segue destination="reP-7z-V9g" kind="relationship" relationship="viewControllers" id="r6v-1E-inB"/>
+                        <segue destination="BDt-BE-FIO" kind="relationship" relationship="viewControllers" id="KoW-0g-ANy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
-        <!--View Controller - search-->
+        <!--Navigation Controller - search-->
+        <scene sceneID="7yK-KD-8xV">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="BDt-BE-FIO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="search" id="L91-lc-DBd"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="xov-r4-A88">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="of4-ct-khk" kind="relationship" relationship="rootViewController" id="Je9-wK-6iG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tVd-fI-vUF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="633" y="485"/>
+        </scene>
+        <!--View Controller - 見つける-->
         <scene sceneID="jNx-ND-y0q">
             <objects>
                 <viewController id="of4-ct-khk" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E6t-yf-pBE">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="search" id="73S-sB-5yV"/>
+                    <navigationItem key="navigationItem" title="見つける" id="kZR-WG-BhI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEf-l3-KtI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="638" y="476"/>
+            <point key="canvasLocation" x="1116" y="491"/>
         </scene>
     </scenes>
     <classes>
         <class className="LogTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LogTableViewController.h"/>
+        </class>
+        <class className="SelectViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SelectViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

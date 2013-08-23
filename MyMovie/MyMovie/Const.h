@@ -6,6 +6,8 @@
 //  Copyright (c) 2013年 fett. All rights reserved.
 //
 
+//  共通変数
+
 #ifndef MyMovie_Const_h
 #define MyMovie_Const_h
 

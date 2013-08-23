@@ -12,6 +12,7 @@
 		975E163217C6219300EF90D5 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 975E162F17C6219300EF90D5 /* SVProgressHUD.bundle */; };
 		975E163317C6219300EF90D5 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 975E163117C6219300EF90D5 /* SVProgressHUD.m */; };
 		975E163517C621E500EF90D5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 975E163417C621E500EF90D5 /* QuartzCore.framework */; };
+		975E167217C654AA00EF90D5 /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 975E167117C654AA00EF90D5 /* SelectViewController.m */; };
 		97A1403317C5CC0100A92089 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A1403217C5CC0100A92089 /* UIKit.framework */; };
 		97A1403517C5CC0100A92089 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A1403417C5CC0100A92089 /* Foundation.framework */; };
 		97A1403717C5CC0100A92089 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A1403617C5CC0100A92089 /* CoreGraphics.framework */; };
@@ -43,6 +44,8 @@
 		975E163017C6219300EF90D5 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		975E163117C6219300EF90D5 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		975E163417C621E500EF90D5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		975E167017C654AA00EF90D5 /* SelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectViewController.h; sourceTree = "<group>"; };
+		975E167117C654AA00EF90D5 /* SelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectViewController.m; sourceTree = "<group>"; };
 		97A1402F17C5CC0100A92089 /* MyMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97A1403217C5CC0100A92089 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		97A1403417C5CC0100A92089 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -138,14 +141,16 @@
 		97A1403817C5CC0100A92089 /* MyMovie */ = {
 			isa = PBXGroup;
 			children = (
+				975E162D17C5FAD600EF90D5 /* Const.h */,
 				97A1404117C5CC0100A92089 /* AppDelegate.h */,
 				97A1404217C5CC0100A92089 /* AppDelegate.m */,
 				97A1404A17C5CC0100A92089 /* MainStoryboard.storyboard */,
-				97A1406217C5CC6400A92089 /* SearchViews */,
+				975E167017C654AA00EF90D5 /* SelectViewController.h */,
+				975E167117C654AA00EF90D5 /* SelectViewController.m */,
 				97A1406117C5CC5200A92089 /* LogViews */,
+				97A1406217C5CC6400A92089 /* SearchViews */,
 				975E162917C5F04D00EF90D5 /* Logic */,
 				97A1403917C5CC0100A92089 /* Supporting Files */,
-				975E162D17C5FAD600EF90D5 /* Const.h */,
 				975E162E17C6219300EF90D5 /* SVProgressHUD */,
 			);
 			path = MyMovie;
@@ -280,6 +285,7 @@
 				975E162817C5F04900EF90D5 /* Movie.m in Sources */,
 				975E162C17C5F5E800EF90D5 /* MovieSearcher.m in Sources */,
 				975E163317C6219300EF90D5 /* SVProgressHUD.m in Sources */,
+				975E167217C654AA00EF90D5 /* SelectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
