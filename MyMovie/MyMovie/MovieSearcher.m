@@ -32,6 +32,7 @@
     }
     NSDictionary* resultDictionary = [self getMovieArrayWithURLString:url];
 //    NSArray *movies = [self getMovieArrayWithURLString:url];
+    NSLog(@"%@",resultDictionary);
     NSArray *movies;
     switch (initial)
     {
@@ -44,7 +45,7 @@
             url = @"";
             break;
     }
-    
+    NSLog(@"%@",[movies objectAtIndex:0]);
     
     return [movies objectAtIndex:0];
 }
@@ -94,7 +95,7 @@
         [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.5]];
         NSLog(@"isFinish=%d",isFinishConnection);
 
-    }while(isFinishConnection);
+    }while(!isFinishConnection);
 //    return nil;
     return receivedData;
 //    return [self dictionaryToMovieArrayWithDictionary:receivedData];
@@ -143,7 +144,7 @@
 - (NSString*)getUrlForiTunesWithTerm:(NSString*)term
 {
     NSString *result =
-    [NSString stringWithFormat:@"https://itunes.apple.com/search?country=JP&entity=movie&term=%@",term];
+    [NSString stringWithFormat:@"https://itunes.apple.com/search?country=JP&entity=movie&term=%@",[term stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     return result;
 }
 

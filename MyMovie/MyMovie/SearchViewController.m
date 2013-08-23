@@ -38,7 +38,12 @@
 }
 
 -(void) pushButton{
-    movieList = [[movieSearcher getMovieFromTerm:@"World"] mutableCopy];
+//    NSArray *array2 = [movieSearcher getMovieFromId:@"1400614530"];
+    movieList = [[NSMutableArray alloc] init];
+    
+    movieList = (NSMutableArray*)[movieSearcher getMovieFromTerm:@"ハリーポッター"];
+    NSLog(@"movieCount");
+    NSLog(@"%d",movieList.count);
     for(int i = 0; i < movieList.count; i++){
         NSLog(@"%@",((Movie*)[movieList objectAtIndex:i]).title);
     }
