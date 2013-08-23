@@ -30,8 +30,22 @@
             url = @"";
             break;
     }
+    NSDictionary* resultDictionary = [self getMovieArrayWithURLString:url];
+//    NSArray *movies = [self getMovieArrayWithURLString:url];
+    NSArray *movies;
+    switch (initial)
+    {
+        case ITUNES:
+            movies = [self dictionaryToMovieArrayWithDictionary:resultDictionary];
+            break;
+        case GOOGLE:
+            break;
+        case ELSE:
+            url = @"";
+            break;
+    }
     
-    NSArray *movies = [self getMovieArrayWithURLString:url];
+    
     return [movies objectAtIndex:0];
 }
 
@@ -41,13 +55,19 @@
 {
     NSString *url = [self getUrlForiTunesWithTerm:term];
     
-    return [self getMovieArrayWithURLString:url];
+    NSDictionary* itunesResultDictionary = [self getMovieArrayWithURLString:url];
+    
+    //Google番は後で実装を行った後コメントを外す
+//    NSDictionary*googleResultDictionary;
+    
+    
+    return [self dictionaryToMovieArrayWithDictionary:itunesResultDictionary];
 }
 
 
 
 // URLをHTTPリクエストした結果のリストを返す．
-- (NSArray*)getMovieArrayWithURLString:(NSString*)url
+- (NSDictionary*)getMovieArrayWithURLString:(NSString*)url
 {
     transmitting = YES;
     [SVProgressHUD show];
@@ -76,7 +96,8 @@
 
     }while(isFinishConnection);
 //    return nil;
-    return [self dictionaryToMovieArrayWithDictionary:receivedData];
+    return receivedData;
+//    return [self dictionaryToMovieArrayWithDictionary:receivedData];
 }
 
 // NSDictionary型 から Movie の NSArray に変換．

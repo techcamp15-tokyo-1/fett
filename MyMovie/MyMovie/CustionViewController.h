@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "MovieSearcher.h"
 
 @interface CustionViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     AppDelegate *appDelegate;
+    MovieSearcher *movieSearcher;
     
-    UITableView *moviesView;
     NSMutableArray *movieList;
 }
 

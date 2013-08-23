@@ -9,5 +9,6 @@
 #import "CustionViewController.h"
 
 @interface SearchViewController : CustionViewController
+@property (weak, nonatomic) IBOutlet UITableView *resultList;
 
 @end

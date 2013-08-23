@@ -30,6 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    movieSearcher = [MovieSearcher alloc];
     
     // AppDelegateと紐付け
     appDelegate = [[UIApplication sharedApplication] delegate];
