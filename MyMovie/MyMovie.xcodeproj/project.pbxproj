@@ -14,7 +14,6 @@
 		975E163217C6219300EF90D5 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 975E162F17C6219300EF90D5 /* SVProgressHUD.bundle */; };
 		975E163317C6219300EF90D5 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 975E163117C6219300EF90D5 /* SVProgressHUD.m */; };
 		975E163517C621E500EF90D5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 975E163417C621E500EF90D5 /* QuartzCore.framework */; };
-		975E167217C654AA00EF90D5 /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 975E167117C654AA00EF90D5 /* SelectViewController.m */; };
 		97A1403317C5CC0100A92089 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A1403217C5CC0100A92089 /* UIKit.framework */; };
 		97A1403517C5CC0100A92089 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A1403417C5CC0100A92089 /* Foundation.framework */; };
 		97A1403717C5CC0100A92089 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A1403617C5CC0100A92089 /* CoreGraphics.framework */; };
@@ -29,11 +28,13 @@
 		97A1405317C5CC0100A92089 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A1405217C5CC0100A92089 /* first@2x.png */; };
 		97A1405817C5CC0100A92089 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A1405717C5CC0100A92089 /* second.png */; };
 		97A1405A17C5CC0100A92089 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 97A1405917C5CC0100A92089 /* second@2x.png */; };
-		97A1406517C5CC9200A92089 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A1406417C5CC9200A92089 /* SearchViewController.m */; };
 		97A1406817C5CCB300A92089 /* LogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A1406717C5CCB300A92089 /* LogTableViewController.m */; };
 		97A1406A17C5CD6900A92089 /* LogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97A1406917C5CD6900A92089 /* LogCell.xib */; };
 		97A1406D17C5CE1100A92089 /* LogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 97A1406C17C5CE1100A92089 /* LogCell.m */; };
 		97A9C26C17C5D27C008676BC /* sample_img60.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97A9C26B17C5D27C008676BC /* sample_img60.jpg */; };
+		97BDF40417C7437C00055CD1 /* CustionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BDF40317C7437B00055CD1 /* CustionViewController.m */; };
+		97BDF40D17C7507500055CD1 /* LogSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97BDF40C17C7507500055CD1 /* LogSelectViewController.m */; };
+		97D4D26F17C75D9E0062DDAF /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D4D26E17C75D9E0062DDAF /* SearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,8 +49,6 @@
 		975E163017C6219300EF90D5 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		975E163117C6219300EF90D5 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		975E163417C621E500EF90D5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		975E167017C654AA00EF90D5 /* SelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectViewController.h; sourceTree = "<group>"; };
-		975E167117C654AA00EF90D5 /* SelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectViewController.m; sourceTree = "<group>"; };
 		97A1402F17C5CC0100A92089 /* MyMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97A1403217C5CC0100A92089 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		97A1403417C5CC0100A92089 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,14 +67,18 @@
 		97A1405217C5CC0100A92089 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		97A1405717C5CC0100A92089 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		97A1405917C5CC0100A92089 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		97A1406317C5CC9200A92089 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		97A1406417C5CC9200A92089 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		97A1406617C5CCB300A92089 /* LogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogTableViewController.h; sourceTree = "<group>"; };
 		97A1406717C5CCB300A92089 /* LogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogTableViewController.m; sourceTree = "<group>"; };
 		97A1406917C5CD6900A92089 /* LogCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogCell.xib; sourceTree = "<group>"; };
 		97A1406B17C5CE1100A92089 /* LogCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogCell.h; sourceTree = "<group>"; };
 		97A1406C17C5CE1100A92089 /* LogCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogCell.m; sourceTree = "<group>"; };
 		97A9C26B17C5D27C008676BC /* sample_img60.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_img60.jpg; sourceTree = "<group>"; };
+		97BDF40217C7437B00055CD1 /* CustionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustionViewController.h; sourceTree = "<group>"; };
+		97BDF40317C7437B00055CD1 /* CustionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustionViewController.m; sourceTree = "<group>"; };
+		97BDF40B17C7507500055CD1 /* LogSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogSelectViewController.h; sourceTree = "<group>"; };
+		97BDF40C17C7507500055CD1 /* LogSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogSelectViewController.m; sourceTree = "<group>"; };
+		97D4D26D17C75D9E0062DDAF /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		97D4D26E17C75D9E0062DDAF /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,8 +155,8 @@
 				97A1404117C5CC0100A92089 /* AppDelegate.h */,
 				97A1404217C5CC0100A92089 /* AppDelegate.m */,
 				97A1404A17C5CC0100A92089 /* MainStoryboard.storyboard */,
-				975E167017C654AA00EF90D5 /* SelectViewController.h */,
-				975E167117C654AA00EF90D5 /* SelectViewController.m */,
+				97BDF40217C7437B00055CD1 /* CustionViewController.h */,
+				97BDF40317C7437B00055CD1 /* CustionViewController.m */,
 				97A1406117C5CC5200A92089 /* LogViews */,
 				97A1406217C5CC6400A92089 /* SearchViews */,
 				975E162917C5F04D00EF90D5 /* Logic */,
@@ -195,6 +198,8 @@
 			children = (
 				97A1406617C5CCB300A92089 /* LogTableViewController.h */,
 				97A1406717C5CCB300A92089 /* LogTableViewController.m */,
+				97BDF40B17C7507500055CD1 /* LogSelectViewController.h */,
+				97BDF40C17C7507500055CD1 /* LogSelectViewController.m */,
 				97A1406B17C5CE1100A92089 /* LogCell.h */,
 				97A1406C17C5CE1100A92089 /* LogCell.m */,
 				97A1406917C5CD6900A92089 /* LogCell.xib */,
@@ -205,8 +210,8 @@
 		97A1406217C5CC6400A92089 /* SearchViews */ = {
 			isa = PBXGroup;
 			children = (
-				97A1406317C5CC9200A92089 /* SearchViewController.h */,
-				97A1406417C5CC9200A92089 /* SearchViewController.m */,
+				97D4D26D17C75D9E0062DDAF /* SearchViewController.h */,
+				97D4D26E17C75D9E0062DDAF /* SearchViewController.m */,
 			);
 			name = SearchViews;
 			sourceTree = "<group>";
@@ -286,14 +291,15 @@
 			files = (
 				97A1403F17C5CC0100A92089 /* main.m in Sources */,
 				97A1404317C5CC0100A92089 /* AppDelegate.m in Sources */,
-				97A1406517C5CC9200A92089 /* SearchViewController.m in Sources */,
 				97A1406817C5CCB300A92089 /* LogTableViewController.m in Sources */,
 				97A1406D17C5CE1100A92089 /* LogCell.m in Sources */,
 				975E162817C5F04900EF90D5 /* Movie.m in Sources */,
 				975E162C17C5F5E800EF90D5 /* MovieSearcher.m in Sources */,
 				975E163317C6219300EF90D5 /* SVProgressHUD.m in Sources */,
-				975E167217C654AA00EF90D5 /* SelectViewController.m in Sources */,
 				4414601D17C7267500E55D97 /* Model.xcdatamodeld in Sources */,
+				97BDF40417C7437C00055CD1 /* CustionViewController.m in Sources */,
+				97BDF40D17C7507500055CD1 /* LogSelectViewController.m in Sources */,
+				97D4D26F17C75D9E0062DDAF /* SearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
