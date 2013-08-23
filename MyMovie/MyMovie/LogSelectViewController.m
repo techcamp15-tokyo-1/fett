@@ -1,18 +1,18 @@
 //
-//  SelectViewController.m
+//  LogSelectViewController.m
 //  MyMovie
 //
-//  Created by Tetsuro Fuji on 13/08/22.
+//  Created by Tetsuro Fuji on 13/08/23.
 //  Copyright (c) 2013年 fett. All rights reserved.
 //
 
-#import "SelectViewController.h"
+#import "LogSelectViewController.h"
 
-@interface SelectViewController ()
+@interface LogSelectViewController ()
 
 @end
 
-@implementation SelectViewController
+@implementation LogSelectViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,14 +25,18 @@
 
 - (void)viewDidLoad
 {
+    moviesView = _movieTableView;
+    
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)back:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{}];
 }
 
 @end
