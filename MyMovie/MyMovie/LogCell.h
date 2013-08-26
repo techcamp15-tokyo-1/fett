@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *jacketImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *typeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *evaluation;
+@property (weak, nonatomic) IBOutlet UIImageView *judgeImage;
 
 
 @end

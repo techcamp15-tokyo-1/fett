@@ -7,11 +7,16 @@
 //
 
 #import "CustionViewController.h"
+#import "SelectViewDelegate.h"
+#import "FlatUIKit.h"
 
-@interface LogSelectViewController : CustionViewController
+@interface LogSelectViewController : CustionViewController<UISearchBarDelegate>
+{
+    id<SelectViewDelegate> _delegate;
+}
 
-@property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UITableView *movieTableView;
+@property (nonatomic) id delegate;
 
 - (IBAction)back:(id)sender;
 

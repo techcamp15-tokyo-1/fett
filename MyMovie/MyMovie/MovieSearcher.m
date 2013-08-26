@@ -125,13 +125,13 @@
     //ジャンルの取得
     NSString *movieType = [result objectForKey:@"primaryGenreName"];
     //映画の画像の取得
-    NSString *imageUrl = [result objectForKey:@"artworkUrl30"];
-    id path = imageUrl;
-    NSURL *url = [NSURL URLWithString:path];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    UIImage *movieImage = [[UIImage alloc]initWithData:data];
+    NSString *imageUrl = [result objectForKey:@"artworkUrl60"];
+//    id path = imageUrl;
+//    NSURL *url = [NSURL URLWithString:path];
+//    NSData *data = [NSData dataWithContentsOfURL:url];
+//    UIImage *movieImage = [[UIImage alloc]initWithData:data];
     
-    return [[Movie alloc] initWithId:movieId Image:movieImage Title:movieTitle Type:movieType];
+    return [[Movie alloc] initWithId:movieId ImageURL:imageUrl Title:movieTitle Type:movieType];
 }
 
 // iTunes Api用のリクエストURLを生成．

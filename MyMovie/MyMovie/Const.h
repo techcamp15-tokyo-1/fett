@@ -15,4 +15,7 @@
 #define GOOGLE  2
 #define ELSE    3
 
+#define LIKE @"like"
+#define DISLIKE @"dislike"
+
 #endif

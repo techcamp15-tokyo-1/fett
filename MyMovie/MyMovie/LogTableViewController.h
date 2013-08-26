@@ -11,15 +11,17 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "LogCell.h"
+#import "CustionViewController.h"
 #import "SimpleCoreObject.h"
-#import "MovieSearcher.h" 
+#import "LogSelectViewController.h"
 
-@interface LogTableViewController : UITableViewController
+@interface LogTableViewController : CustionViewController<SelectViewDelegate>
 {
     SimpleCoreObject *simpleCoreObject;
-    MovieSearcher *movieSearcher;
 }
+
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
+
 - (IBAction)pushButton:(id)sender;
 
 @end

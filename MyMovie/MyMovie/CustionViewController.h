@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Const.h"
 #import "AppDelegate.h"
 #import "MovieSearcher.h"
+#import "LogCell.h"
 
 #define CELLNIBNAME @"LogCell"
 #define CELLIDENTIFIER @"LogCell"

@@ -33,14 +33,6 @@
     
     // AppDelegateと紐付け
     appDelegate = [[UIApplication sharedApplication] delegate];
-    
-    // tableViewのデリゲート設定
-//    moviesView.delegate = self;
-//    moviesView.dataSource = self;
-    
-    // カスタムセル利用の宣言
-//    [moviesView registerNib:[UINib nibWithNibName:CELLNIBNAME bundle:nil]
-//     forCellReuseIdentifier:CELLIDENTIFIER];
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,12 +62,20 @@
     [cell.titleLabel setText:movie.title];
     [cell.typeLabel setText:movie.type];
     
+    if (movie.evaluation) {
+        if ([movie.evaluation isEqualToString:LIKE]) {
+            [cell.judgeImage setImage:appDelegate.likeImage];
+        } else if ([movie.evaluation isEqualToString:DISLIKE]) {
+            [cell.judgeImage setImage:appDelegate.dislikeImage];
+        }
+    }
+    
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 64;
+    return 60;
 }
 
 

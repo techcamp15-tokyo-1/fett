@@ -13,7 +13,6 @@
 @synthesize jacketImageView;
 @synthesize titleLabel;
 @synthesize typeLabel;
-@synthesize evaluation;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
