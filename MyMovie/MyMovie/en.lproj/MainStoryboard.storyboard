@@ -19,6 +19,11 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="log" id="Aqh-NN-gOB"/>
                     <navigationItem key="navigationItem" title="記録" id="BOK-7x-4uX">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="88P-oo-rwg">
+                            <connections>
+                                <action selector="pushButton:" destination="OU3-AS-wof" id="26w-Cz-8ZL"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="v8k-uF-0gb">
                             <connections>
                                 <segue destination="aTL-6d-eBt" kind="modal" modalTransitionStyle="coverVertical" id="cam-V6-evW"/>
