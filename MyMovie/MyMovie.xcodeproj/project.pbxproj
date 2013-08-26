@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4402811B17C99A4F0076DD44 /* DBStaticField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4402811A17C99A4F0076DD44 /* DBStaticField.m */; };
+		4404D2FC17C8BA18003436BB /* MovieDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 4404D2FB17C8BA18003436BB /* MovieDB.m */; };
+		4404D2FF17C8C774003436BB /* SimpleCoreObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4404D2FE17C8C774003436BB /* SimpleCoreObject.m */; };
 		4414601A17C7265400E55D97 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4414601917C7265400E55D97 /* CoreData.framework */; };
 		4414601D17C7267500E55D97 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4414601B17C7267500E55D97 /* Model.xcdatamodeld */; };
 		975E162817C5F04900EF90D5 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 975E162717C5F04900EF90D5 /* Movie.m */; };
@@ -38,6 +41,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4402811917C99A4F0076DD44 /* DBStaticField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBStaticField.h; sourceTree = "<group>"; };
+		4402811A17C99A4F0076DD44 /* DBStaticField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBStaticField.m; sourceTree = "<group>"; };
+		4404D2FA17C8BA18003436BB /* MovieDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDB.h; sourceTree = "<group>"; };
+		4404D2FB17C8BA18003436BB /* MovieDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDB.m; sourceTree = "<group>"; };
+		4404D2FD17C8C774003436BB /* SimpleCoreObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCoreObject.h; sourceTree = "<group>"; };
+		4404D2FE17C8C774003436BB /* SimpleCoreObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCoreObject.m; sourceTree = "<group>"; };
 		4414601917C7265400E55D97 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4414601C17C7267500E55D97 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		975E162617C5F04900EF90D5 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
@@ -97,6 +106,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44D44D6217C8E2DA006082AB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		975E162917C5F04D00EF90D5 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +137,12 @@
 		97A1402617C5CC0100A92089 = {
 			isa = PBXGroup;
 			children = (
+				44D44D6217C8E2DA006082AB /* Resources */,
 				4414601B17C7267500E55D97 /* Model.xcdatamodeld */,
+				4404D2FA17C8BA18003436BB /* MovieDB.h */,
+				4404D2FD17C8C774003436BB /* SimpleCoreObject.h */,
+				4404D2FE17C8C774003436BB /* SimpleCoreObject.m */,
+				4404D2FB17C8BA18003436BB /* MovieDB.m */,
 				4414601917C7265400E55D97 /* CoreData.framework */,
 				975E163417C621E500EF90D5 /* QuartzCore.framework */,
 				97A1403817C5CC0100A92089 /* MyMovie */,
@@ -198,6 +219,8 @@
 			children = (
 				97A1406617C5CCB300A92089 /* LogTableViewController.h */,
 				97A1406717C5CCB300A92089 /* LogTableViewController.m */,
+				4402811917C99A4F0076DD44 /* DBStaticField.h */,
+				4402811A17C99A4F0076DD44 /* DBStaticField.m */,
 				97BDF40B17C7507500055CD1 /* LogSelectViewController.h */,
 				97BDF40C17C7507500055CD1 /* LogSelectViewController.m */,
 				97A1406B17C5CE1100A92089 /* LogCell.h */,
@@ -300,6 +323,9 @@
 				97BDF40417C7437C00055CD1 /* CustionViewController.m in Sources */,
 				97BDF40D17C7507500055CD1 /* LogSelectViewController.m in Sources */,
 				97D4D26F17C75D9E0062DDAF /* SearchViewController.m in Sources */,
+				4404D2FC17C8BA18003436BB /* MovieDB.m in Sources */,
+				4404D2FF17C8C774003436BB /* SimpleCoreObject.m in Sources */,
+				4402811B17C99A4F0076DD44 /* DBStaticField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

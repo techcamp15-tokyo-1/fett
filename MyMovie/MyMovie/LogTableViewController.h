@@ -12,9 +12,14 @@
 
 #import <UIKit/UIKit.h>
 #import "LogCell.h"
+#import "SimpleCoreObject.h"
+#import "MovieSearcher.h" 
 
 @interface LogTableViewController : UITableViewController
 {
+    SimpleCoreObject *simpleCoreObject;
+    MovieSearcher *movieSearcher;
 }
+- (IBAction)pushButton:(id)sender;
 
 @end
